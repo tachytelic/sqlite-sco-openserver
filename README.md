@@ -72,18 +72,3 @@ sqlite-sco-pkg/
 ```
 
 If the binary doesn't run on a different patch level, use `rebuild.sh` to recompile — GCC 2.95.3 must be installed.
-
-## Connecting from a Modern SSH Client
-
-Modern OpenSSH disables the legacy algorithms that SCO's SSH daemon offers. Add this to `~/.ssh/config`:
-
-```
-Host your-sco-box
-    HostName x.x.x.x
-    User root
-    KexAlgorithms +diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
-    HostKeyAlgorithms +ssh-rsa
-    PubkeyAcceptedKeyTypes +ssh-rsa
-    MACs +hmac-sha1,hmac-md5
-    Ciphers +aes128-cbc,aes256-cbc,3des-cbc
-```
