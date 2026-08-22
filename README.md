@@ -4,18 +4,18 @@ Precompiled SQLite 3.39.4 for SCO OpenServer 5.0.6 / 5.0.7, compiled with GCC 2.
 
 More background on the [blog post](https://tachytelic.net/2017/07/sco-openserver-stuff/).
 
-## Download
-
-Download `sqlite-3.39.4-sco507.tar.gz` from the [Releases](../../releases) page.
-
 ## Installation
 
 ```sh
 cd /tmp
-gzip -d sqlite-3.39.4-sco507.tar.gz | tar xf -
+curl -LO https://github.com/tachytelic/sqlite-sco-openserver/releases/download/v3.39.4/sqlite-3.39.4-sco507.tar.gz
+gunzip -c sqlite-3.39.4-sco507.tar.gz | tar xf -
 cd sqlite-sco-pkg
 sh install.sh
 ```
+
+If the box has no working HTTPS yet, download the tarball from the
+[Releases](../../releases) page on another machine and copy it across.
 
 Installs to `/usr/local/bin/sqlite3` and `/usr/local/include/sqlite3.h`. To use a different prefix:
 
