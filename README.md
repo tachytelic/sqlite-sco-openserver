@@ -2,7 +2,7 @@
 
 Precompiled SQLite 3.39.4 for SCO OpenServer 5.0.6 / 5.0.7, compiled with GCC 2.95.3.
 
-More background on the [blog post](https://tachytelic.net/2017/07/sco-openserver-stuff/).
+More background on the [blog post](https://scoexpert.com/guides/sco-openserver-5-binaries/).
 
 ## Installation
 
